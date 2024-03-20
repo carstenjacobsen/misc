@@ -85,12 +85,3 @@ At the moment there's no frontend for the demo dapp, but the Candid UI is an eas
 http://127.0.0.1:4943/?canisterId=br5f7-7uaaa-aaaaa-qaaca-cai&id=bkyz2-fmaaa-aaaaa-qaaaq-cai
 ```
 
-  
-  
-  
-  
-  
-
-## Agent
-
-The agent
