@@ -7,12 +7,12 @@ The backend is very simple, the main purpose of the functions is to implement th
 ### Functions  
 
 ```
-async fn set_subscription(topic_id: String, callback: String)
+async fn set_subscription(topic_name: String, callback: String)
 ```
 Register topic subscription. Messages will be delivered to the callback function.
 
 **Parameters**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*topic_id*: The ID string of the topic to subscribe to <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*topic_name*: The name (string) of the topic to subscribe to <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*callback*: The function the messages will be delivered to <br/>
       
 **Return**<br/>
