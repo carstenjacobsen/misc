@@ -16,8 +16,7 @@ Register topic subscription. Messages will be delivered to the callback function
 &nbsp;&nbsp;&nbsp;&nbsp;*callback*: The function the messages will be delivered to <br/>
 
 **Return**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Result&lt;String, String&gt;<br/>
-
+&nbsp;&nbsp;&nbsp;&nbsp;Result&lt;String, String&gt;<br/><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: Subscription ID<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not register the subscriber"<br/>
 
@@ -31,8 +30,7 @@ Unregister topic subscription.
 &nbsp;&nbsp;&nbsp;&nbsp;*subscription_id*: The ID string of the subscription to remove 
 
 **Return**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Result&lt;String, String&gt;<br/>
-
+&nbsp;&nbsp;&nbsp;&nbsp;Result&lt;String, String&gt;<br/><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: The removed subscription ID<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not unregister the subscriber"<br/>
 
@@ -46,8 +44,7 @@ Get the subscription with a specific ID.
 &nbsp;&nbsp;&nbsp;&nbsp;(none) 
 
 **Return**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Subscriber<br/>
-&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;Subscriber<br/><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- *record {*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*id: text;*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*canister_id: text;*<br/>
