@@ -32,10 +32,11 @@ Unregister topic subscription.
 
 **Return**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Result&lt;String, String&gt;<br/>
+
 &nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: The removed subscription ID<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not unregister the subscriber"<br/>
-&nbsp; 
-&nbsp;
+
+
 ```
 async fn get_subscription(subscription_id: String) 
 ```
@@ -46,6 +47,7 @@ Get the subscription with a specific ID.
 
 **Return**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Subscriber<br/>
+
 &nbsp;&nbsp;&nbsp;&nbsp;- *record {*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*id: text;*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*canister_id: text;*<br/>
@@ -56,8 +58,8 @@ Get the subscription with a specific ID.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*namespace: text;*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*active: bool;*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*};*<br/>
-&nbsp; 
-&nbsp;
+
+
 ```
 async fn get_subscriptions() -> Vec<Subscribers> 
 ```
@@ -68,6 +70,19 @@ Get all subscriptions registered to this canister.
 
 **Return**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Vec&lt;Subscribers&gt;<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;- *vec {*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;*record {*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*id: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*canister_id: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*callback: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*name: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*description: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*topic: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*namespace: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*active: bool;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*};*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*};*<br/>
       
 
   
