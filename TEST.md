@@ -22,9 +22,9 @@ Register topic subscription. Messages will be delivered to the callback function
 &nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not register the subscriber"<br/>
 &nbsp; 
 &nbsp;
-```
-async fn unset_subscription(subscription_id: String)
-```
+
+>async fn unset_subscription(subscription_id: String)
+
 Unregister topic subscription.
 
 **Parameters**<br/>
