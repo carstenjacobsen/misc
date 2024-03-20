@@ -14,7 +14,7 @@ Register topic subscription. Messages will be delivered to the callback function
 **Parameters**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*topic_id*: The ID string of the topic to subscribe to <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*callback*: The function the messages will be delivered to <br/>
-      qwe
+	qwe
       
 **Return**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Result&lt;String, String&gt;<br/><br/>
