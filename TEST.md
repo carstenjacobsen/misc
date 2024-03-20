@@ -1,4 +1,3 @@
-
 # Demo Dapp
 The demo dapp implements the functionality of the service bus, and is used for both testing and demonstration of how to implement the agent. This demo dapp is for Rust developers, there will also be a Motoko demo dapp (date TBD);
 
@@ -18,6 +17,7 @@ Register topic subscription. Messages will be delivered to the callback function
 
 **Return**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Result&lt;String, String&gt;<br/>
+
 &nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: Subscription ID<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not register the subscriber"<br/>
 &nbsp; 
