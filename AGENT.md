@@ -4,12 +4,12 @@ The agent is a subscriber-side wrapper for the functionality of the service bus,
 ### Functions  
 
 ```
-pub async fn subscribe(topic: String, callback: String)
+pub async fn subscribe(topic_name: String, callback: String)
 ```
 Register topic subscription. Messages will be delivered to the callback function.
 
 **Parameters**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*topic*: The name of the topic to subscribe to <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*topic_name*: The name (string) of the topic to subscribe to <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*callback*: The function the messages will be delivered to <br/>
       
 **Return**<br/>
