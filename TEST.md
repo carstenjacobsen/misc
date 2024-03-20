@@ -46,7 +46,7 @@ Get the subscription with a specific ID.
 
 **Return**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Subscriber<br/>
->&nbsp;&nbsp;&nbsp;&nbsp;- *record {*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *record {*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*id: text;*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*canister_id: text;*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*callback: text;*<br/>
