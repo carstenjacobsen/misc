@@ -18,8 +18,7 @@ Register topic subscription. Messages will be delivered to the callback function
 **Return**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Result&lt;String, String&gt;<br/><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: Subscription ID<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not register the subscriber"<br/>
-
+&nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not register the subscriber"<br/><br/>
 
 ```
 async fn unset_subscription(subscription_id: String)
@@ -32,8 +31,7 @@ Unregister topic subscription.
 **Return**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Result&lt;String, String&gt;<br/><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: The removed subscription ID<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not unregister the subscriber"<br/>
-
+&nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not unregister the subscriber"<br/><br/>
 
 ```
 async fn get_subscription(subscription_id: String) 
@@ -54,8 +52,7 @@ Get the subscription with a specific ID.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*topic: text;*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*namespace: text;*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*active: bool;*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*};*<br/>
-
+&nbsp;&nbsp;&nbsp;&nbsp;*};*<br/><br/>
 
 ```
 async fn get_subscriptions() -> Vec<Subscribers> 
