@@ -70,7 +70,7 @@ Get all subscriptions registered to this canister.
 
 **Return**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Vec&lt;Subscribers&gt;<br/>
-
+&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;- *vec {*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*record {*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*id: text;*<br/>
