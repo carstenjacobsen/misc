@@ -32,6 +32,7 @@ Unregister topic subscription.
 &nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: The removed subscription ID<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not unregister the subscriber"<br/><br/>
 
+### Get subscription details
 ```
 async fn subscription(subscription_id: String) 
 ```
@@ -53,6 +54,7 @@ Get the subscription with a specific ID.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*active: bool;*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*};*<br/><br/>
 
+### Get all subscriptions
 ```
 pub async fn subscriptions() 
 ```
