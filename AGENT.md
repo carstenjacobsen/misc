@@ -1,8 +1,9 @@
 # Rust Agent
 The agent is a subscriber-side wrapper for the functionality of the service bus, and is used for easy setup of the subscription to topics. This agent is for Rust developers, there will also be a Motoko agent (release TBD).
 
-### Functions  
+## Functions  
 
+### Subscribe to topic
 ```
 pub async fn subscribe(topic_name: String, callback: String)
 ```
@@ -17,6 +18,7 @@ Register topic subscription. Messages will be delivered to the callback function
 &nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: Subscription ID<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not register the subscriber"<br/><br/>
 
+### Unsubscribe from topic
 ```
 async fn unsubscribe(subscription_id: String)
 ```
