@@ -39,7 +39,7 @@ async fn subscription(subscription_id: String)
 Get the subscription with a specific ID.
 
 **Parameters**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;(none) 
+&nbsp;&nbsp;&nbsp;&nbsp;*subscription_id*: The ID string of the subscription to get 
 
 **Return**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Subscriber<br/><br/>
