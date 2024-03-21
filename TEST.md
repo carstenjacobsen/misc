@@ -1,11 +1,10 @@
 # Demo Dapp
 The demo dapp implements the functionality of the service bus, and is used for both testing and demonstration of how to implement the agent. This demo dapp is for Rust developers, there will also be a Motoko demo dapp (release TBD);
 
-## Backend
+## Backend Functions
 The backend is very simple, the main purpose of the functions is to implement the agent. All communication with the service bus system goes through the agent, so the demo dapp doesn't need to know about .
 
-### Functions  
-
+### Add subscription  
 ```
 async fn set_subscription(topic_name: String, callback: String)
 ```
@@ -20,6 +19,7 @@ Register topic subscription. Messages will be delivered to the callback function
 &nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: Subscription ID<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not register the subscriber"<br/><br/>
 
+### Remove subscription
 ```
 async fn unset_subscription(subscription_id: String)
 ```
@@ -33,6 +33,7 @@ Unregister topic subscription.
 &nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: The removed subscription ID<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not unregister the subscriber"<br/><br/>
 
+### Get subscription details
 ```
 async fn get_subscription(subscription_id: String) 
 ```
@@ -54,6 +55,7 @@ Get the subscription with a specific ID.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*active: bool;*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*};*<br/><br/>
 
+### Get all subscriptions
 ```
 async fn get_subscriptions() -> Vec<Subscribers> 
 ```
