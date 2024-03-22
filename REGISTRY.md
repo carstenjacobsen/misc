@@ -11,7 +11,7 @@ fn namespace_register(namespace: Namespace)
 Register a new namespace.
 
 **Parameters**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*namespace*: A record with the <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*namespace*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- *record {*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*name: text;*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*description: text;*<br/>
