@@ -11,23 +11,19 @@ fn namespace_register(namespace: Namespace)
 Register a new namespace.
 
 **Parameters**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*namespace*: The name (string) of the topic to subscribe to <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*namespace*: A record with the <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- *record {*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*id: text;*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*canister_id: text;*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*callback: text;*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*name: text;*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*description: text;*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*topic: text;*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*namespace: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*subscribers: vec text;*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*active: bool;*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*};*<br/><br/>
 
       
 **Return**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Result&lt;String, String&gt;<br/><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: Subscription ID<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not register the subscriber"<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: Namespace ID<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not register the namespace"<br/><br/>
 
 ### Remove subscription
 ```
