@@ -120,23 +120,24 @@ Get all namespaces registered for a specific topic
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*}*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*};*<br/><br/>
 
-
-
-
-
-### Add namespace  
+### Get namespace by subscriber
 ```
-fn namespace_register(namespace: Namespace)
+fn namespace_by_subscriber(subscriber_id: String)
 ```
-Register a new namespace.
+Get the namespace of a specific subscriber is subscribing to
 
 **Parameters**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*namespace*: A record of the type Namespace<br/><br/>
-      
+&nbsp;&nbsp;&nbsp;&nbsp;*subscriber_id*: The ID string of the subscriber 
+
 **Return**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Result&lt;String, String&gt;<br/><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: Namespace ID<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not register the namespace"<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Namespaces<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *record {*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*id: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*name: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*description: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*subscribers: vec text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*active: bool;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*};*<br/><br/>
 
 
 ## Topic functions
