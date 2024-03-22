@@ -6,13 +6,23 @@ Namespaces are the core of the registry. Topic subscribers are registered in nam
 
 ### Add namespace  
 ```
-async fn set_subscription(topic_name: String, callback: String)
+fn namespace_register(namespace: Namespace)
 ```
-Register topic subscription. Messages will be delivered to the callback function.
+Register a new namespace.
 
 **Parameters**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*topic_name*: The name (string) of the topic to subscribe to <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*callback*: The function the messages will be delivered to <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*namespace*: The name (string) of the topic to subscribe to <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *record {*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*id: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*canister_id: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*callback: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*name: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*description: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*topic: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*namespace: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*active: bool;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*};*<br/><br/>
+
       
 **Return**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Result&lt;String, String&gt;<br/><br/>
