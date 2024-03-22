@@ -53,7 +53,7 @@ Get the namespace with a specific ID.
 
 ### Get all namespaces
 ```
-async fn get_subscriptions() -> Vec<Subscribers> 
+async fn get_subscriptions()
 ```
 Get all namespaces
 
@@ -99,6 +99,26 @@ Get the number of subscribers a specific namespace has
 **Return**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;usize<br/><br/>
 
+### Get namespaces by topic
+```
+fn namespaces_by_topic(topic_id: String) 
+```
+Get all namespaces registered for a specific topic
+
+**Parameters**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*topic_id*: The ID string of the topic
+
+**Return**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Vec&lt;Namespaces&gt;<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *vec {*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*record {*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*id: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*name: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*description: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*subscribers: vec text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*active: bool;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*}*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*};*<br/><br/>
 
 
 
