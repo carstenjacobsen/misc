@@ -25,19 +25,19 @@ Register a new namespace.
 &nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: Namespace ID<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not register the namespace"<br/><br/>
 
-### Remove subscription
+### Remove namespace
 ```
-async fn unset_subscription(subscription_id: String)
+fn namespace_unregister(namespace_id: String)
 ```
-Unregister topic subscription.
+Unregister a namespace.
 
 **Parameters**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*subscription_id*: The ID string of the subscription to remove 
+&nbsp;&nbsp;&nbsp;&nbsp;*namespace_id*: The ID string of the namespace to remove 
 
 **Return**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Result&lt;String, String&gt;<br/><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: The removed subscription ID<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not unregister the subscriber"<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: The removed namespace ID<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not unregister the namespace"<br/><br/>
 
 
 
