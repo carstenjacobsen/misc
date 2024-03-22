@@ -72,7 +72,20 @@ Get all namespaces
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*}*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*};*<br/>
 
+### Add subscriber to namespace
+```
+fn namespace_register_subscriber(namespace_id: String, subscriber_id: String)
+```
+Add a created, unassigned subscriber to a namespace. 
 
+**Parameters**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*namespace_id*: The ID string of the namespace<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*subscriber_id*: The ID string of the subscriber to add
+
+**Return**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Result&lt;String, String&gt;<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: The namespace ID<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not add subscriber"<br/><br/>
 
 
 
