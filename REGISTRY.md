@@ -2,9 +2,9 @@
 The registry is the module that is used for configuration of the service bus. Topics, namespaces and subscriptions are registered with this module, and the registry is accessible for all other modules. There's a separate set of functions just to support the subscriber agent.  
 
 ## Namespace Functions
-The registry functions are used internally in the service bus, and for administrative purposes. 
+Namespaces are the core of the registry. Topic subscribers are registered in namespaces, and the namespaces are routing messages to subscriber canisters. Namespaces can be used to create collections of topics that are related (by topics or subscribers), and as load balancers if there's a large amount of subscribers.
 
-### Add subscription  
+### Add namespace  
 ```
 async fn set_subscription(topic_name: String, callback: String)
 ```
