@@ -234,6 +234,34 @@ Get all namespaces
 
 ## Subscriber functions
 
+### Add subscription  
+```
+async fn set_subscription(topic_name: String, callback: String)
+```
+Register topic subscription. Messages will be delivered to the callback function.
+
+**Parameters**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*topic_name*: The name (string) of the topic to subscribe to <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*callback*: The function the messages will be delivered to <br/>
+      
+**Return**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Result&lt;String, String&gt;<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: Subscription ID<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not register the subscriber"<br/><br/>
+
+### Remove subscription
+```
+async fn unset_subscription(subscription_id: String)
+```
+Unregister topic subscription.
+
+**Parameters**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*subscription_id*: The ID string of the subscription to remove 
+
+**Return**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Result&lt;String, String&gt;<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: The removed subscription ID<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not unregister the subscriber"<br/><br/>
 
 
 
