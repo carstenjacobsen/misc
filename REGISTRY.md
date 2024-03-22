@@ -141,6 +141,91 @@ Get the namespace of a specific subscriber is subscribing to
 
 
 ## Topic functions
+Topics are the data channel the subscribers are subscribing to. The message intake system will forward data to topics.
+
+### Add topic  
+```
+fn topic_register(topic: Topic)
+```
+Register a new topic
+
+**Parameters**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*namespace*: A record of the type Topic<br/><br/>
+      
+**Return**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Result&lt;String, String&gt;<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: Topic ID<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not register the topic"<br/><br/>
+
+### Remove topic
+```
+fn topic_unregister(topic_id: String)
+```
+Unregister a topic
+
+**Parameters**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*topic_id*: The ID string of the topic to remove 
+
+**Return**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Result&lt;String, String&gt;<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: The removed topic ID<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not unregister topic"<br/><br/>
+
+### Get namespace details
+```
+async fn namespace(namespace_id: String) 
+```
+Get the namespace with a specific ID.
+
+**Parameters**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*namespace_id*: The ID string of the namespace to get 
+
+**Return**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Namespaces<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *record {*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*id: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*name: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*description: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*subscribers: vec text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*active: bool;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*};*<br/><br/>
+
+### Get all namespaces
+```
+async fn get_subscriptions()
+```
+Get all namespaces
+
+**Parameters**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;(none) 
+
+**Return**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Vec&lt;Namespaces&gt;<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *vec {*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*record {*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*id: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*name: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*description: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*subscribers: vec text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*active: bool;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*}*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*};*<br/><br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
