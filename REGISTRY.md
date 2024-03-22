@@ -11,14 +11,7 @@ fn namespace_register(namespace: Namespace)
 Register a new namespace.
 
 **Parameters**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Namespace<br/><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;- *record {*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*name: text;*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*description: text;*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*subscribers: vec text;*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*active: bool;*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*};*<br/><br/>
-
+&nbsp;&nbsp;&nbsp;&nbsp;*namespace*: A record of the type Namespace<br/><br/>
       
 **Return**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Result&lt;String, String&gt;<br/><br/>
@@ -109,3 +102,13 @@ At the moment there's no frontend for the demo dapp, but the Candid UI is an eas
 ```
 http://127.0.0.1:4943/?canisterId=br5f7-7uaaa-aaaaa-qaaca-cai&id=bkyz2-fmaaa-aaaaa-qaaaq-cai
 ```
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;- *record {*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*name: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*description: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*subscribers: vec text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*active: bool;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*};*<br/><br/>
