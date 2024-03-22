@@ -70,7 +70,7 @@ Get all namespaces
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*subscribers: vec text;*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*active: bool;*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*}*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*};*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*};*<br/><br/>
 
 ### Add subscriber to namespace
 ```
@@ -87,7 +87,17 @@ Add a created, unassigned subscriber to a namespace.
 &nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: The namespace ID<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not add subscriber"<br/><br/>
 
+### Get namespace subscriber count
+```
+fn namespace_subscriber_size(namespace_id: String)
+```
+Get the number of subscribers a specific namespace has 
 
+**Parameters**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*namespace_id*: The ID string of the namespace
+
+**Return**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;usize<br/><br/>
 
 
 
