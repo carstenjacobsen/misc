@@ -171,14 +171,14 @@ Unregister a topic
 &nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: The removed topic ID<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not unregister topic"<br/><br/>
 
-### Get namespace details
+### Get topic details
 ```
-async fn namespace(namespace_id: String) 
+fn topic(topic_id: String)  
 ```
-Get the namespace with a specific ID.
+Get the topic with a specific ID.
 
 **Parameters**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*namespace_id*: The ID string of the namespace to get 
+&nbsp;&nbsp;&nbsp;&nbsp;*topic_id*: The ID string of the topic to get 
 
 **Return**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Namespaces<br/><br/>
