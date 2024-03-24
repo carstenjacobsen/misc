@@ -181,7 +181,7 @@ Get the topic with a specific ID.
 &nbsp;&nbsp;&nbsp;&nbsp;*topic_id*: The ID string of the topic to get 
 
 **Return**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Namespaces<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Topics<br/><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- *record {*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*id: text;*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*name: text;*<br/>
@@ -211,7 +211,24 @@ Get all topics
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*}*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*};*<br/><br/>
 
+### Get topic by name
+```
+fn topic_by_name(topic_name: String)
+```
+Get a topic by it's name. Clients are identifying topics by name, and not by ID, which makes this function useful.
 
+**Parameters**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*topic_name*: The name of the topic to get 
+
+**Return**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Topics<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *record {*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*id: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*name: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*description: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*namespaces: vec text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*active: bool;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*};*<br/><br/>
 
 
 
