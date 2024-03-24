@@ -244,7 +244,7 @@ Register a new subscriber
       
 **Return**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Result&lt;String, String&gt;<br/><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: The removed topic ID<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: subscriber ID<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not unregister topic"<br/><br/>
 
 ### Remove subscriber
