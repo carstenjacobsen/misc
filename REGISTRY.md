@@ -307,23 +307,6 @@ Get all topics
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*}*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*};*<br/><br/>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Subscriber functions
 
 ### Add subscription  
@@ -354,7 +337,6 @@ Unregister topic subscription.
 &nbsp;&nbsp;&nbsp;&nbsp;Result&lt;String, String&gt;<br/><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: The removed subscription ID<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not unregister the subscriber"<br/><br/>
-
 
 ### Get subscription details
 ```
@@ -402,17 +384,68 @@ Get all subscriptions registered to this canister.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*}*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*};*<br/>
 
-
-
 ## Agent functions
-At the moment there's no frontend for the demo dapp, but the Candid UI is an easier and more user friendly way of test the backend functionality, without having to use the command line instructions. Check the actual Candid UI URL when deployed, but for a local deployment it will most likely be:
+The purpose of the agent functions is to expose a subset of the registry functionality to external agents.
 
+### Add subscription
 ```
-http://127.0.0.1:4943/?canisterId=br5f7-7uaaa-aaaaa-qaaca-cai&id=bkyz2-fmaaa-aaaaa-qaaaq-cai
+pub async fn agent_subscribe(topic_name: String, callback: String)
 ```
+Allows an agent to add a subscription, by providing topic and callback information
 
+**Parameters**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*topic_name*: The name (string) of the topic to subscribe to <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*callback*: The function the messages will be delivered to <br/>
 
+**Return**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;CallStringResponse<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *record {*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*result: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*};*<br/><br/>
 
+### Remove subscription
+```
+pub async fn agent_unsubscribe(subscription_id: String)
+```
+Unregister topic subscription.
+
+**Parameters**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*subscription_id*: The ID string of the subscription to remove 
+
+**Return**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Result&lt;String, String&gt;<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: The removed subscription ID<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not unregister the subscriber"<br/><br/>
+
+### Get subscription details
+```
+pub async fn agent_subscriber(subscriber_id: String)
+```
+Get the subscription with a specific ID.
+
+**Parameters**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*subscriber_id*: The ID string of the subscription to remove
+
+**Return**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;CallSubscriberResponse<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *record {*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*result: Subscribers;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*};*<br/><br/>
+
+### Get all subscriptions
+```
+pub async fn agent_subscriptions()
+```
+Get all subscriptions registered to this canister.
+
+**Parameters**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;(none) 
+
+**Return**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;CallSubscribersResponse<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*record {*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*result: Subscribers;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*}*<br/>
 
 ## Whitelist functions
 
