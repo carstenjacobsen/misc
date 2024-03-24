@@ -230,7 +230,76 @@ Get a topic by it's name. Clients are identifying topics by name, and not by ID,
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*active: bool;*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*};*<br/><br/>
 
+## Subscriber functions
+Subscribers are the receivers of messages distributed through the service bus. Subscribers can subscribe to topics, and the topic messages are delivered to the callback function specified by the subscriber.
 
+### Add subscriber  
+```
+fn topic_register(topic: Topic)
+```
+Register a new topic
+
+**Parameters**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*namespace*: A record of the type Topic<br/><br/>
+      
+**Return**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Result&lt;String, String&gt;<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: Topic ID<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not register the topic"<br/><br/>
+
+### Remove topic
+```
+fn topic_unregister(topic_id: String)
+```
+Unregister a topic
+
+**Parameters**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*topic_id*: The ID string of the topic to remove 
+
+**Return**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Result&lt;String, String&gt;<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: The removed topic ID<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not unregister topic"<br/><br/>
+
+### Get topic details
+```
+fn topic(topic_id: String)  
+```
+Get the topic with a specific ID.
+
+**Parameters**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*topic_id*: The ID string of the topic to get 
+
+**Return**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Topics<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *record {*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*id: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*name: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*description: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*namespaces: vec text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*active: bool;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*};*<br/><br/>
+
+### Get all topics
+```
+fn topics()
+```
+Get all topics
+
+**Parameters**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;(none) 
+
+**Return**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Vec&lt;Topics&gt;<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *vec {*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*record {*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*id: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*name: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*description: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*namespaces: vec text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*active: bool;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*}*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*};*<br/><br/>
 
 
 
