@@ -443,9 +443,9 @@ Get all subscriptions registered to this canister.
 
 **Return**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;CallSubscribersResponse<br/><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*record {*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *record {*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*result: Subscribers;*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*}*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*};*<br/>
 
 ## Whitelist functions
 
