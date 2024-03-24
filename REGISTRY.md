@@ -235,31 +235,31 @@ Subscribers are the receivers of messages distributed through the service bus. S
 
 ### Add subscriber  
 ```
-fn topic_register(topic: Topic)
+pub async fn subscriber_register(subscriber: Subscribers)
 ```
-Register a new topic
+Register a new subscriber
 
 **Parameters**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*namespace*: A record of the type Topic<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*subscriber*: A record of the type Subscribers<br/><br/>
       
-**Return**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Result&lt;String, String&gt;<br/><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: Topic ID<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not register the topic"<br/><br/>
-
-### Remove topic
-```
-fn topic_unregister(topic_id: String)
-```
-Unregister a topic
-
-**Parameters**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*topic_id*: The ID string of the topic to remove 
-
 **Return**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Result&lt;String, String&gt;<br/><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: The removed topic ID<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not unregister topic"<br/><br/>
+
+### Remove subscriber
+```
+fn subscriber_unregister(subscriber_id: String)
+```
+Unregister a subscriber
+
+**Parameters**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*subscriber_id*: The ID string of the subscriber to remove 
+
+**Return**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Result&lt;String, String&gt;<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: The removed subscriber ID<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not unregister subscriber"<br/><br/>
 
 ### Get topic details
 ```
@@ -271,11 +271,14 @@ Get the topic with a specific ID.
 &nbsp;&nbsp;&nbsp;&nbsp;*topic_id*: The ID string of the topic to get 
 
 **Return**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Topics<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Subscribers<br/><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- *record {*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*id: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*canister_id: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*callback: text;*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*name: text;*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*description: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*topic: text;*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*namespaces: vec text;*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*active: bool;*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*};*<br/><br/>
