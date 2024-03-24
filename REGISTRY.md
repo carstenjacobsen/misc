@@ -263,12 +263,12 @@ Unregister a subscriber
 
 ### Get topic details
 ```
-fn topic(topic_id: String)  
+fn subscriber(subscriber_id: String) 
 ```
-Get the topic with a specific ID.
+Get the subscriber with a specific ID.
 
 **Parameters**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*topic_id*: The ID string of the topic to get 
+&nbsp;&nbsp;&nbsp;&nbsp;*subscriber_id*: The ID string of the subscriber to get 
 
 **Return**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Subscribers<br/><br/>
@@ -285,7 +285,7 @@ Get the topic with a specific ID.
 
 ### Get all topics
 ```
-fn topics()
+fn subscribers()
 ```
 Get all topics
 
@@ -293,12 +293,15 @@ Get all topics
 &nbsp;&nbsp;&nbsp;&nbsp;(none) 
 
 **Return**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Vec&lt;Topics&gt;<br/><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Vec&lt;Subscribers&gt;<br/><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- *vec {*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*record {*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*id: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*canister_id: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*callback: text;*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*name: text;*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*description: text;*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*topic: text;*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*namespaces: vec text;*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*active: bool;*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*}*<br/>
