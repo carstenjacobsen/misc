@@ -362,7 +362,7 @@ Get the subscription with a specific ID.
 
 ### Get all subscriptions
 ```
-async fn get_subscriptions() -> Vec<Subscribers> 
+async fn get_subscriptions()
 ```
 Get all subscriptions registered to this canister.
 
