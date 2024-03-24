@@ -338,7 +338,7 @@ Register topic subscription. Messages will be delivered to the callback function
       
 **Return**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Result&lt;String, String&gt;<br/><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: Subscription ID<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: The subscription ID<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not register the subscriber"<br/><br/>
 
 ### Remove subscription
@@ -354,7 +354,6 @@ Unregister topic subscription.
 &nbsp;&nbsp;&nbsp;&nbsp;Result&lt;String, String&gt;<br/><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- *Ok*: The removed subscription ID<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;- *Err*: "Could not unregister the subscriber"<br/><br/>
-
 
 
 ### Get subscription details
@@ -404,8 +403,6 @@ Get all subscriptions registered to this canister.
 &nbsp;&nbsp;&nbsp;&nbsp;*};*<br/>
 
 
-## Whitelist functions
-
 
 ## Agent functions
 At the moment there's no frontend for the demo dapp, but the Candid UI is an easier and more user friendly way of test the backend functionality, without having to use the command line instructions. Check the actual Candid UI URL when deployed, but for a local deployment it will most likely be:
@@ -417,9 +414,6 @@ http://127.0.0.1:4943/?canisterId=br5f7-7uaaa-aaaaa-qaaca-cai&id=bkyz2-fmaaa-aaa
 
 
 
-&nbsp;&nbsp;&nbsp;&nbsp;- *record {*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*name: text;*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*description: text;*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*subscribers: vec text;*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*active: bool;*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*};*<br/><br/>
+## Whitelist functions
+
+To Do
