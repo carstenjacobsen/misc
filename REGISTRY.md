@@ -450,3 +450,5 @@ Get all subscriptions registered to this canister.
 ## Whitelist functions
 
 To Do
+
+## Demo Dapp
