@@ -25,3 +25,22 @@ The canister that wants to subscribe to a topic registers with canister id and c
 
 Based on the topic, the system will assign the namespace
 
+
+```
+"demo_frontend": {
+      "dependencies": [
+        "demo_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/demo_frontend/src/index.html"
+      },
+      "source": [
+        "src/demo_frontend/assets",
+        "dist/demo_frontend/"
+      ],
+      "type": "assets"
+    }
+```
+
+
+
